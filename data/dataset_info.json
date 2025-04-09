@@ -348,6 +348,20 @@
       "system_tag": "system"
     }
   },
+  "Sky-T1": {
+    "hf_hub_url": "NovaSky-AI/Sky-T1_data_17k",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "system": "system"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "open_r1_math": {
     "hf_hub_url": "llamafactory/OpenR1-Math-94k",
     "formatting": "sharegpt",
