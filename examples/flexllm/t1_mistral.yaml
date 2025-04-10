@@ -19,7 +19,7 @@ deepspeed: examples/deepspeed/ds_z3_config.json
 
 ### dataset
 dataset: t1_flexllm
-template: llama3
+template: mistral_small
 cutoff_len: 8192
 max_samples: 1000
 overwrite_cache: true
