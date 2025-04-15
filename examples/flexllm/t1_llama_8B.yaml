@@ -1,5 +1,5 @@
 ### model
-model_name_or_path: mistralai/Mistral-Small-24B-Instruct-2501
+model_name_or_path: meta-llama/Llama-3.1-8B-Instruct
 trust_remote_code: true
 
 ### method
@@ -9,17 +9,13 @@ finetuning_type: lora
 lora_rank: 16
 lora_target: down_proj
 flash_attn: fa2
-# since unsloth is not supported on multiple gpus, use liger instead
-# https://github.com/hiyouga/LLaMA-Factory/issues/6940
-use_unsloth: false 
-enable_liger_kernel: false
+use_unsloth: true
 rope_scaling: llama3
 train_from_scratch: true
-deepspeed: examples/deepspeed/ds_z3_config.json
 
 ### dataset
 dataset: t1_flexllm
-template: mistral_small
+template: llama3
 cutoff_len: 8192
 max_samples: 1000
 overwrite_cache: true
@@ -28,7 +24,7 @@ dataloader_num_workers: 4
 disable_shuffling: true
 
 ### output
-output_dir: saves/mistral-small/lora/sft
+output_dir: saves/t1_llama_8B/lora/sft
 logging_steps: 10
 save_strategy: "no"
 save_steps: 500

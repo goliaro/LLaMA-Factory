@@ -178,4 +178,6 @@ swanlog/
 generated_predictions.jsonl
 
 data/t1_flexllm.json
+data/t1_flexllm_llama.json
+data/t1_flexllm_qwen.json
 unsloth_compiled_cache

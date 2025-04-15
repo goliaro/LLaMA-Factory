@@ -1,5 +1,5 @@
 ### model
-model_name_or_path: meta-llama/Llama-3.1-8B-Instruct
+model_name_or_path: Qwen/Qwen2.5-14B-Instruct
 trust_remote_code: true
 
 ### method
@@ -9,13 +9,17 @@ finetuning_type: lora
 lora_rank: 16
 lora_target: down_proj
 flash_attn: fa2
-use_unsloth: true
+# since unsloth is not supported on multiple gpus, use liger instead
+# https://github.com/hiyouga/LLaMA-Factory/issues/6940
+use_unsloth: false 
+enable_liger_kernel: false
 rope_scaling: llama3
 train_from_scratch: true
+deepspeed: examples/deepspeed/ds_z3_config.json
 
 ### dataset
-dataset: t1_flexllm
-template: llama3
+dataset: t1_flexllm_qwen
+template: qwen
 cutoff_len: 8192
 max_samples: 1000
 overwrite_cache: true
@@ -24,7 +28,7 @@ dataloader_num_workers: 4
 disable_shuffling: true
 
 ### output
-output_dir: saves/llama3.1-8b/lora/sft
+output_dir: saves/t1_qwen_14B/lora/sft
 logging_steps: 10
 save_strategy: "no"
 save_steps: 500

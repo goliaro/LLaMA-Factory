@@ -18,8 +18,8 @@ train_from_scratch: true
 deepspeed: examples/deepspeed/ds_z3_config.json
 
 ### dataset
-dataset: t1_flexllm
-template: llama3
+dataset: t1_flexllm_qwen
+template: qwen
 cutoff_len: 8192
 max_samples: 1000
 overwrite_cache: true
@@ -28,7 +28,7 @@ dataloader_num_workers: 4
 disable_shuffling: true
 
 ### output
-output_dir: saves/qwen2.5-32b_deepspeed/lora/sft
+output_dir: saves/t1_qwen_32B/lora/sft
 logging_steps: 10
 save_strategy: "no"
 save_steps: 500
