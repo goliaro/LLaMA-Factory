@@ -14,7 +14,7 @@ rope_scaling: llama3
 train_from_scratch: true
 
 ### dataset
-dataset: t1_flexllm
+dataset: t1_flexllm_llama
 template: llama3
 cutoff_len: 8192
 max_samples: 1000

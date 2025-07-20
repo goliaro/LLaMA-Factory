@@ -362,8 +362,8 @@
       "assistant_tag": "assistant"
     }
   },
-  "t1_flexllm": {
-    "file_name": "t1_flexllm.json",
+  "t1_flexllm_llama": {
+    "file_name": "t1_flexllm_llama.json",
     "formatting": "sharegpt",
     "columns": {
       "messages": "conversations",
